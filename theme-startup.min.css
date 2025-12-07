@@ -955,8 +955,12 @@ nav.bg-dark span {
 }
 
 .hero-section {
-    background-image: url("/img/20251205172537.png");    
-    height: 80vh;
+    background-image: url("/img/header-lg.webp");    
+    background-position: center center !important;
+    background-repeat: no-repeat;
+    background-size: cover !important;
+    width: 100%;
+    height: 50vh;
     display: flex;
     align-items: center;
     color: white;
