@@ -102,9 +102,10 @@
     }
     </script>
 </head>
-<body class="stretched">
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MSL2VRBG" height="0" width="0"
+ <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MSL2VRBG" height="0" width="0"
             style="display:none;visibility:hidden"></iframe></noscript>
+            
+<body class="button-large scroll-assist">
     <div class="nav-container">
         <nav class="absolute transparent">
             <div class="nav-bar">
@@ -151,20 +152,49 @@
 
     <div class="main-container">
         
-       <section id="slider" class="image-bg overlay pt-xs-64 pb-xs-64 text-center-xs">
-            <div class="background-image-holder" style="background: url(&quot;img/header-lg.avif;);" loading="lazy">
-                <img class="background-image" src="img/header-lg.avif" loading="lazy">
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-10 col-sm-12 mt80 mt-xs-0">
-                        <h1>Mudanzas Miranda</h1>
-                        <p class="lead mt-xs-8 mt24">Mudanzas en Mendoza</p>
-                        <a onclick="if (!window.__cfRLUnblockHandlers) return false; return gtag_report_conversion('https://wa.link/zn3zij');" href="https://wa.link/zn3zij" class="btn btn-filled btn-rounded btn-lg mt-xs-32" data-cf-modified-92913282758dd7998a7f65ec-=""><i class="fa-brands fa-whatsapp fa-1x"></i> PRESUPUESTO GRATIS</a>
-                    </div>
+    <section class="hero-slider no-padding">
+        <div class="slides">
+    
+            <!-- Slide 1 -->
+            <div class="slide active">
+                <img src="/img/header-lg.avif" alt="">
+                <div class="content">
+                    <h1>Mudanzas rápidas y seguras</h1>
+                    <p>Tu traslado en Mendoza sin complicaciones.</p>
+                    <a onclick="if (!window.__cfRLUnblockHandlers) return false; return gtag_report_conversion('https://wa.link/zn3zij');" href="https://wa.link/zn3zij" class="btn btn-filled btn-rounded btn-lg mt-xs-32" data-cf-modified-92913282758dd7998a7f65ec-=""><i class="fa-brands fa-whatsapp fa-1x"></i> PRESUPUESTO GRATIS</a>
                 </div>
             </div>
-        </section>
+    
+            <!-- Slide 2 -->
+            <div class="slide">
+                <img src="https://picsum.photos/id/1025/1600/900" alt="">
+                <div class="content">
+                    <h1>Atención personalizada</h1>
+                    <p>Nos adaptamos a tus horarios y necesidades.</p>
+                </div>
+            </div>
+    
+            <!-- Slide 3 -->
+            <div class="slide">
+                <img src="https://picsum.photos/id/1037/1600/900" alt="">
+                <div class="content">
+                    <h1>Equipos profesionales</h1>
+                    <p>Tu mudanza, en manos expertas.</p>
+                </div>
+            </div>
+    
+        </div>
+    
+        <!-- Controles -->
+        <div class="controls">
+            <button id="prev">‹</button>
+            <button id="next">›</button>
+        </div>
+    
+        <!-- Indicadores -->
+        <div class="indicators"></div>
+    </section>
+    
 
 
         <section class="section-nosotros">
@@ -375,7 +405,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js" rel="prefetch" as="script"></script>
     <script src="js/plugins.min.js" rel="prefetch" as="script"></script>
     <script src="js/scripts.min.js" rel="prefetch" as="script"></script>
-
+    <script src="js/slider.js" rel="prefetch" as="script"></script>
 
 
     <!-- Facebook Tag Pixel -->

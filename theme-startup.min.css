@@ -766,7 +766,7 @@ ul.lead li i {
 
 section {
     overflow: hidden;
-    padding: 60px 0;
+    padding: 100px 0;
     position: relative
 }
 
@@ -7327,3 +7327,131 @@ html[xmlns] .flexslider .slides {
     font-size: 20px;
 }
 
+.hero-slider {
+  position: relative;
+  width: 100%;
+  height: 50vh;
+  overflow: hidden;
+  font-family: sans-serif;
+}
+
+.slides {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.slide img {
+  width: 100%;
+  height: 50vh;
+  object-fit: cover;
+  filter: brightness(60%);
+}
+
+.content {
+  position: absolute;
+  bottom: 10%;
+  left: 8%;
+  color: white;
+  max-width: 600px;
+  animation: fadeUp 0.8s ease-out;
+}
+
+.content h1 {
+  font-size: 3em;
+  margin: 0 0 20px;
+  color: white;
+}
+
+.content p {
+  font-size: 1.5em;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Controles */
+.controls button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.2);
+  border: none;
+  color: #fff;
+  font-size: 3rem;
+  padding: 0 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#prev { left: 10px; }
+#next { right: 10px; }
+
+.controls button:hover {
+  background: rgba(255,255,255,0.4);
+}
+
+/* Indicadores */
+.indicators {
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+}
+
+.indicators div {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.4);
+  cursor: pointer;
+}
+
+.indicators .active {
+  background: white;
+}
+
+
+/* CTA Button */
+.cta-btn {
+  display: inline-block;
+  padding: 14px 28px;
+  background: #00c853; /* verde moderno */
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  transition: background 0.3s, transform 0.2s;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+}
+
+.cta-btn:hover {
+  background: #00e676;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .content h1 { font-size: 2rem; }
+  .content p { font-size: 1rem; }
+  .cta-btn { font-size: 1rem; padding: 12px 22px; }
+}
+
+.no-padding {
+    padding: 0 !important;
+}
